@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="Start your development with a Dashboard for Bootstrap 4." name="description">
+    <meta content="Baitullah Bareer" name="author">
+
+<!-- Title -->
+    <title>PU Monographs</title>
+    <!-- Favicon -->
+    <link href="Image/logo_paktia.png" rel="icon" type="image/png">
+    
+    <!-- Custom CSS -->
+    <link href="assets/libs/morris.js/morris.css" rel="stylesheet">
+    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="dist/css/style.min.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800" rel="stylesheet">
+    
+        <!--Bootstrap.min css-->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+
+    <!-- PU E-library CSS -->
+    <link href="assets/css/dashboard.css" rel="stylesheet" type="text/css">
+
+    <!-- Tabs CSS -->
+    <link href="assets/plugins/tabs/style.css" rel="stylesheet" type="text/css">
+
+    <!-- jvectormap CSS -->
+    <link href="assets/plugins/jvectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+
+    <!-- Custom scroll bar css-->
+  <link href="assets/plugins/customscroll/jquery.mCustomScrollbar.css" rel="stylesheet" />
+
+    <!-- Sidemenu Css -->
+    <link href="assets/plugins/toggle-sidebar/css/sidemenu.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <div class="navbar-header">
+                    <!-- This is for the sidebar toggle which is visible on mobile only -->
+                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+                    <!-- ============================================================== -->
+                    <!-- Logo -->
+                    <!-- ============================================================== -->
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Logo icon -->
+                        <b class="logo-icon">
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            <!-- Dark Logo icon -->
+                            
+                            <!-- Light Logo icon -->
+                            <img src="assets/images/publklogo.jpg" alt="homepage" class="light-logo" />
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text -->
+                        <span class="logo-text">
+                             <!-- dark Logo text -->
+                            
+                             <!-- Light Logo text -->    
+                             <img src="assets/images/logo-light-text.png" class="light-logo" alt="homepage" />
+                        </span>
+                    </a>
+                    <!-- ============================================================== -->
+                    <!-- End Logo -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- Toggle which is visible on mobile only -->
+                    <!-- ============================================================== -->
+                    <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="ti-more"></i></a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav float-left mr-auto">
+                        <li class="nav-item d-none d-md-block"><a class="nav-link sidebartoggler waves-effect waves-light" href="javascript:void(0)" data-sidebartype="mini-sidebar"><i class="mdi mdi-menu font-24"></i></a></li>
+                        <!-- ============================================================== -->
+                        <!--  Search -->
+                        <!-- ============================================================== -->
+                       <li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+ <input style="height:30px;" placeholder="Search" id="textbox" type="text">
+     </a>
+
+ <div class="dropdown-menu animated bounceInDown" aria-labelledby="navbarDropdown2">
+    
+    <a href="#" class="dropdown-item "> <strong>incorporating ways </strong> </br> 1.Voice Searching: If you dont typing you can Search by voice, your voice will be convert to text! <br>
+2: writing Searching: if you can typeing you can search by typeing words </a>
+                                            <div class="dropdown-divider"></div>
+<a href="#" class="dropdown-item "> <strong>Guide </strong> </br> 1.First you should wirte the title of eduacation resources in the search text-box! <br>
+2: second you should choice the type of educational resources beside of search text-box!
+ <br>
+3:After the selection type of educational resource, your searching will be going!</a>
+                                            <div class="dropdown-divider"></div>
+<a href="#" class="dropdown-item "><strong>Examples </strong> </br> 1. finding a book which has title "Afghanistan Telecommunication". <br>
+2: finding a Monongraph which has title "Web Hosting".</a>
+                                          </div>
+                            
+                        </li>
+
+                 <!-- ============================================================== -->
+                        <!-- Search type -->
+                      <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="d-none d-md-block"> Search type <i class="fa fa-angle-down"></i></span>
+    <span class="d-block d-md-none"><i class="fa fa-search"></i></span>   
+                            </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <option class="dropdown-item" value="" selected disabled hidden > Search type </option>
+        <option class="dropdown-item" value="Books" > Books </option>
+        <option class="dropdown-item" value="Monographs" >Monographs</option>
+        <option class="dropdown-item" value="Articles" >Articles</option>
+        <option class="dropdown-item" value="Magazines" >Magazines</option>
+        <option class="dropdown-item" value="Conferences" >Conferences</option>
+       </div>
+                        </li> </ul>
+             <!-- ============================================================== -->
+                    <!-- Right side toggle and nav items -->
+             <!-- ============================================================== -->
+                    <ul class="navbar-nav float-right">      
+              <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+    <button type="button" style="margin-top: 12%;" class=" btn btn-primary btn-sm dropdown-toggle btn-rounded" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</button>
+    <div class="dropdown-menu dropdown-menu-right animated flipInY">
+    <span class="with-arrow"><span class="bg-primary"></span></span>
+    <div class="d-flex no-block p-15 bg-primary text-white m-b-10">
+    <div class=""><a class="dropdown-item" href="#">English </a> </div>
+                                </div>
+                <a class="dropdown-item" href="#"><i class=""></i>Pashto</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#"><i class=""></i>Dari</a>
+                    </div>
+                    </li>
+
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                
+                       
+<li class="slide">
+<a class="side-menu__item"  href="Books.html"> <img style="padding-right: 15px;" class=" icons side-menu__icon" src="Image/book.gif"> <span class="side-menu__label" > Books </span><i class="angle fa fa-angle-right"></i> </a>
+ </li>
+
+                            <li class="slide">
+            <a class="side-menu__item"  href="Monographs.html"><img style="padding-right: 15px;" class=" icons side-menu__icon" src="Image/Monograph.gif"><span class="side-menu__label">Monographs</span><i class="angle fa fa-angle-right"></i></a>
+                            </li>
+
+<li class="slide">
+<a class="side-menu__item" data-toggle="slide" href="#"><img style="padding-right: 15px;" class=" icons side-menu__icon" src="Image/paper.gif"><span class="side-menu__label">Articles/Papers</span><i class="angle fa fa-angle-right"></i></a>
+<ul class="slide-menu">
+            <li>
+        <a href="International-articles.html" class="slide-item">International</a>
+                                </li>
+                                <li>
+        <a href="Local-articles.html" class="slide-item">Local</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                            <li class="slide">
+    <a class="side-menu__item" href="Magazines.html">
+<img style="padding-right: 15px;" class=" icons side-menu__icon" src="Image/magazine.gif">     
+        <span class="side-menu__label">Magazines</span><i class="angle fa fa-angle-right"></i></a>
+                            </li>
+
+                            
+                        <li class="slide">
+    <a class="side-menu__item"  href="Conferences.html">
+        <img style="padding-right: 15px;" class=" icons side-menu__icon" src="Image/conferance.gif">     
+<span class="side-menu__label">Conferences</span><i class="angle fa fa-angle-right"></i></a>
+                            
+                        </li>
+                        
+                        <li class="slide">
+   <a class="side-menu__item"  href="gallery.html">
+    <img style="padding-right: 15px;" class=" icons side-menu__icon" src="Image/image.gif">
+    <span class="side-menu__label">Images</span><i class="angle fa fa-angle-right"></i></a>
+                                
+                        </li>
+                    
+
+                        <li class="slide">
+    <a class="side-menu__item" href="login.html">
+        <img style="padding-right: 15px;" class=" icons side-menu__icon" src="Image/login.gif">
+        <span class="side-menu__label">Login</span><i class="angle fa fa-angle-right"></i></a>
+                            
+                        </li>
+                        <li class="slide">
+    <a class="side-menu__item"  href="aboutme.html">
+        <img style="padding-right: 15px;" class=" icons side-menu__icon" src="Image/about me.gif">
+        <span class="side-menu__label">About Me</span><i class="angle fa fa-angle-right"></i></a>
+                        </li>
+                        <li  class="slide">
+    <a class="side-menu__item" href="#">
+        <img style="padding-right: 15px;" class=" icons side-menu__icon" src="Image/help.gif">
+        <span class="side-menu__label">Help & Support</span><i class="angle fa fa-angle-right"></i></a>
+                        </li>
+            
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="page-breadcrumb">
+                <div class="row">
+                    <div class="col-5 align-self-center">
+                        <h4 class="page-title">Monographs</h4>
+                        <div class="d-flex align-items-center">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Monographs</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-7 align-self-center">
+                        <div class="d-flex no-block justify-content-end align-items-center">
+                            <div class="m-r-10">
+                                <div class="lastmonth"></div>
+                            </div>
+                            <div class=""><small>LAST MONTH Viewes</small>
+                                <h4 class="text-info m-b-0 font-medium">584</h4></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+			<div class="row">
+			<div class="col-md-12">
+			<div class="card shadow">
+			<div class="card-header">
+			<h2 class="mb-0">Monographs</h2>
+										</div>
+			<div class="card-body">
+			<div class="table-responsive">
+		<table id="example" class="table table-striped table-bordered w-100 text-nowrap">
+									<thead>
+									<tr>
+									<th class="wd-15p"> Title </th>
+									<th class="wd-15p"> Author </th>
+									<th class="wd-20p"> Year </th>
+									<th class="wd-15p"> Pages </th>
+									<th class="wd-15p"> Open </th>
+									</tr>
+									</thead>
+										<tbody>
+										<tr>
+										<td>The Little Lady of the Big House </td>
+										<td>Jack London </td>
+										<td>System Developer</td>
+										<td>2018</td>
+										<td class="text-center"> <a href="#" class="fas fa-download"> </a> </button></td>
+										</tr>
+										<tr>
+										<td>The Little Lady of the Big House </td>
+										<td>Jack London Jack London Jack London </td>
+										<td>System Developer</td>
+										<td>2018</td>
+									   <td class="text-center"> <a href="#" class="fas fa-download"> </a> </button></td>
+										</tr>
+										</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+									
+									
+ <!-- footer -->
+            <!-- ============================================================== -->
+<footer class="footer">
+        <div class="row align-items-center justify-content-xl-between">
+        <div style="width: 100%;">
+        <div class="copyright text-center text-xl-left text-muted">
+        <p class="text-sm font-weight-500 text-center">Copyright 2024 © All Rights Reserved.</p>
+                                        </div>
+            </div>
+            </div>
+            </footer>
+        
+
+    <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+   
+    <!-- ============================================================== -->
+    <!-- Back to top -->
+    <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+   <!-- Voice convert. --------->
+     <script src="script.js"></script>
+
+
+
+
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="assets/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- apps -->
+    <script src="dist/js/app.min.js"></script>
+    <!-- Theme settings -->
+    <script src="dist/js/app.init.light-sidebar.js"></script>
+    <script src="dist/js/app-style-switcher.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="assets/extra-libs/sparkline/sparkline.js"></script>
+    <!--Wave Effects -->
+    <script src="dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="dist/js/custom.min.js"></script>
+    <!--This page JavaScript -->
+    <!--Morris JavaScript -->
+    <script src="assets/libs/raphael/raphael.min.js"></script>
+    <script src="assets/libs/morris.js/morris.min.js"></script>
+    <script src="assets/extra-libs/DataTables/datatables.min.js"></script>
+    <script src="dist/js/pages/dashboards/dashboard3.js"></script>
+    
+
+
+	<!-- E-library table JS -->
+	<script src="assets/js/custom.js"></script>
+	<script>
+		$(function(e) {
+			$('#example').DataTable();
+
+			var table = $('#example1').DataTable();
+			$('button').click( function() {
+				var data = table.$('input, select').serialize();
+				alert(
+					"The following data would have been submitted to the server: \n\n"+
+					data.substr( 0, 120 )+'...'
+				);
+				return false;
+			});
+			$('#example2').DataTable( {
+				"scrollY":        "200px",
+				"scrollCollapse": true,
+				"paging":         false
+			});
+		} );
+
+	</script>
+</body>
+
+
+</html>

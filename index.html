@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="Start your development with a Dashboard for Bootstrap 4." name="description">
+    <meta content="Baitullah Bareer" name="author">
+
+<!-- Title -->
+    <title>PU E-library</title>
+    <!-- Favicon -->
+    <link href="Image/logo_paktia.png" rel="icon" type="image/png">
+    
+    <!-- Custom CSS -->
+    <link href="assets/libs/morris.js/morris.css" rel="stylesheet">
+    <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="dist/css/style.min.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800" rel="stylesheet">
+    
+        <!--Bootstrap.min css-->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+
+    <!-- PU E-library CSS -->
+    <link href="assets/css/dashboard.css" rel="stylesheet" type="text/css">
+
+    <!-- Tabs CSS -->
+    <link href="assets/plugins/tabs/style.css" rel="stylesheet" type="text/css">
+
+    <!-- jvectormap CSS -->
+    <link href="assets/plugins/jvectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+
+    <!-- Custom scroll bar css-->
+  <link href="assets/plugins/customscroll/jquery.mCustomScrollbar.css" rel="stylesheet" />
+
+    <!-- Sidemenu Css -->
+    <link href="assets/plugins/toggle-sidebar/css/sidemenu.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <div class="navbar-header">
+                    <!-- This is for the sidebar toggle which is visible on mobile only -->
+                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+                    <!-- ============================================================== -->
+                    <!-- Logo -->
+                    <!-- ============================================================== -->
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Logo icon -->
+                        <b class="logo-icon">
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            <!-- Dark Logo icon -->
+                            
+                            <!-- Light Logo icon -->
+                            <img src="assets/images/publklogo.jpg" alt="homepage" class="light-logo" />
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text -->
+                        <span class="logo-text">
+                             <!-- dark Logo text -->
+                            
+                             <!-- Light Logo text -->    
+                             <img src="assets/images/logo-light-text.png" class="light-logo" alt="homepage" />
+                        </span>
+                    </a>
+                    <!-- ============================================================== -->
+                    <!-- End Logo -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- Toggle which is visible on mobile only -->
+                    <!-- ============================================================== -->
+                    <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="ti-more"></i></a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav float-left mr-auto">
+                        <li class="nav-item d-none d-md-block"><a class="nav-link sidebartoggler waves-effect waves-light" href="javascript:void(0)" data-sidebartype="mini-sidebar"><i class="mdi mdi-menu font-24"></i></a></li>
+                        <!-- ============================================================== -->
+                        <!--  Search -->
+                        <!-- ============================================================== -->
+                       <li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+ <input style="height:30px;" placeholder="Search" id="textbox" type="text">
+     </a>
+
+ <div class="dropdown-menu animated bounceInDown" aria-labelledby="navbarDropdown2">
+    
+    <a href="#" class="dropdown-item "> <strong>incorporating ways </strong> </br> 1.Voice Searching: If you dont typing you can Search by voice, your voice will be convert to text! <br>
+2: writing Searching: if you can typeing you can search by typeing words </a>
+                                            <div class="dropdown-divider"></div>
+<a href="#" class="dropdown-item "> <strong>Guide </strong> </br> 1.First you should wirte the title of eduacation resources in the search text-box! <br>
+2: second you should choice the type of educational resources beside of search text-box!
+ <br>
+3:After the selection type of educational resource, your searching will be going!</a>
+                                            <div class="dropdown-divider"></div>
+<a href="#" class="dropdown-item "><strong>Examples </strong> </br> 1. finding a book which has title "Afghanistan Telecommunication". <br>
+2: finding a Monongraph which has title "Web Hosting".</a>
+                                          </div>
+                            
+                        </li>
+
+                 <!-- ============================================================== -->
+                        <!-- Search type -->
+                      <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="d-none d-md-block"> Search type <i class="fa fa-angle-down"></i></span>
+    <span class="d-block d-md-none"><i class="fa fa-search"></i></span>   
+                            </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <option class="dropdown-item" value="" selected disabled hidden > Search type </option>
+        <option class="dropdown-item" value="Books" > Books </option>
+        <option class="dropdown-item" value="Monographs" >Monographs</option>
+        <option class="dropdown-item" value="Articles" >Articles</option>
+        <option class="dropdown-item" value="Magazines" >Magazines</option>
+        <option class="dropdown-item" value="Conferences" >Conferences</option>
+       </div>
+                        </li> </ul>
+             <!-- ============================================================== -->
+                    <!-- Right side toggle and nav items -->
+             <!-- ============================================================== -->
+                    <ul class="navbar-nav float-right">      
+              <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+    <button type="button" style="margin-top: 12%;" class=" btn btn-primary btn-sm dropdown-toggle btn-rounded" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</button>
+    <div class="dropdown-menu dropdown-menu-right animated flipInY">
+    <span class="with-arrow"><span class="bg-primary"></span></span>
+    <div class="d-flex no-block p-15 bg-primary text-white m-b-10">
+    <div class=""><a class="dropdown-item" href="#">English </a> </div>
+                                </div>
+                <a class="dropdown-item" href="#"><i class=""></i>Pashto</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#"><i class=""></i>Dari</a>
+                    </div>
+                    </li>
+<li class="nav-item d-none d-md-flex">
+<div class="dropdown d-none d-md-flex mt-2 ">
+<a class="nav-link full-screen-link pl-0 pr-0"><i class="fe fe-maximize-2 floating " id="fullscreen-button"></i></a>
+<div class="media-body ml-2 d-none d-lg-block">
+<span class="mb-0 ">Full Screen</span>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                
+                       
+<li class="slide">
+<a class="side-menu__item"  href="Books.html"> <img style="padding-right: 15px;" class=" icons side-menu__icon" src="Image/Book.gif"> <span class="side-menu__label" > Books </span><i class="angle fa fa-angle-right"></i> </a>
+ </li>
+
+                            <li class="slide">
+            <a class="side-menu__item"  href="Monographs.html"><img style="padding-right: 15px;" class=" icons side-menu__icon" src="Image/Monograph.gif"><span class="side-menu__label">Monographs</span><i class="angle fa fa-angle-right"></i></a>
+                            </li>
+
+<li class="slide">
+<a class="side-menu__item" data-toggle="slide" href="#"><img style="padding-right: 15px;" class=" icons side-menu__icon" src="Image/paper.gif"><span class="side-menu__label">Articles/Papers</span><i class="angle fa fa-angle-right"></i></a>
+<ul class="slide-menu">
+            <li>
+        <a href="International-articles.html" class="slide-item">International</a>
+                                </li>
+                                <li>
+        <a href="Local-articles.html" class="slide-item">Local</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                            <li class="slide">
+    <a class="side-menu__item" href="Magazines.html">
+<img style="padding-right: 15px;" class=" icons side-menu__icon" src="Image/magazine.gif">     
+        <span class="side-menu__label">Magazines</span><i class="angle fa fa-angle-right"></i></a>
+                            </li>
+
+                            
+                        <li class="slide">
+    <a class="side-menu__item"  href="Conferences.html">
+        <img style="padding-right: 15px;" class=" icons side-menu__icon" src="Image/conferance.gif">     
+<span class="side-menu__label">Conferences</span><i class="angle fa fa-angle-right"></i></a>
+                            
+                        </li>
+                        
+                        <li class="slide">
+   <a class="side-menu__item"  href="gallery.html">
+    <img style="padding-right: 15px;" class=" icons side-menu__icon" src="Image/Image.gif">
+    <span class="side-menu__label">Images</span><i class="angle fa fa-angle-right"></i></a>
+                                
+                        </li>
+                    
+
+                        <li class="slide">
+    <a class="side-menu__item" href="login.html">
+        <img style="padding-right: 15px;" class=" icons side-menu__icon" src="Image/login.gif">
+        <span class="side-menu__label">Login</span><i class="angle fa fa-angle-right"></i></a>
+                            
+                        </li>
+                        <li class="slide">
+    <a class="side-menu__item"  href="aboutme.html">
+        <img style="padding-right: 15px;" class=" icons side-menu__icon" src="Image/about me.gif">
+        <span class="side-menu__label">About Me</span><i class="angle fa fa-angle-right"></i></a>
+                        </li>
+                        <li  class="slide">
+    <a class="side-menu__item" href="#">
+        <img style="padding-right: 15px;" class=" icons side-menu__icon" src="Image/help.gif">
+        <span class="side-menu__label">Help & Support</span><i class="angle fa fa-angle-right"></i></a>
+                        </li>
+            
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="page-breadcrumb">
+                <div class="row">
+                    <div class="col-5 align-self-center">
+                        <h4 class="page-title">Home</h4>
+                        <div class="d-flex align-items-center">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">E-Libray contents</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-7 align-self-center">
+                        <div class="d-flex no-block justify-content-end align-items-center">
+                            <div class="m-r-10">
+                                <div class="lastmonth"></div>
+                            </div>
+                            <div class=""><small>LAST MONTH Viewes</small>
+                                <h4 class="text-info m-b-0 font-medium">584</h4></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Counts Ducuments   -->
+            <!-- ============================================================== -->
+            
+           <div class="card shadow ">
+    <div class="">
+    <div class="row ">
+    <div class="col-xl-2 col-lg-4 col-md-6 col-sm-5 stats">
+    <div class="text-center">
+    <p class="text-light">Books</p>
+    <h2 class="text-primary text-xxl">3678</h2>
+                                        </div>
+                                        </div>
+    <div class="col-xl-2 col-lg-4 col-md-6 col-sm-5 stats">
+    <div class="text-center">
+    <p class="text-light"> Monographs</p>
+    <h2 class="text-yellow text-xxl">6768</h2>
+                                                
+                                        </div>
+                                        </div>
+    <div class="col-xl-2 col-lg-4 col-md-6 col-sm-5  stats">
+    <div class="text-center">
+    <p class="text-light">  Papers/Articls</p>
+    <h2 class="text-warning text-xxl">2678</h2>
+                                                
+                                        </div>
+                                        </div>
+    <div class="col-xl-2 col-lg-4 col-md-6 col-sm-5 stats">
+    <div class="text-center">
+    <p class="text-light">  Conferences </p>
+    <h2 class="text-danger text-xxl"> 799 </h2>
+                                        </div>
+                                        </div>
+    <div class="col-xl-2 col-lg-4 col-md-6 col-sm-5  stats">
+    <div class="text-center">
+    <p class="text-light"> Magazines</p>
+    <h2 class="text-success text-xxl"> 23 </h2>
+                                                
+                                    </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                 <!-- End Counts Ducuments   -->
+            <!-- ============================================================== -->
+                <!-- Professors  -->
+                <!-- ============================================================== -->
+    <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 stats">
+        <div class="card shadow">
+        <div class="card-header bg-transparent">
+        <div class="row align-items-center">
+        <div class="col">
+        <h2 class="mb-0">Propessors</h2>
+        <h6 class="text-uppercase text-light ls-1 mb-1">List of Professors who have updated their education materials: </h6>
+        
+                                        </div>
+                                        </div>
+                                        </div>
+    <div class="card shadow overflow-hidden">
+    <div class="">
+    <div class="row">
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 container-fluid stats">
+    <div class="card-body text-center">
+    <img class="avatar avatar-xxl brround" src="Image/Bareer.jpg" alt="">
+    <h2 class="h3 mb-0 mt-3 font-600">Tea. Ass. Baitullah Bareer</h2>
+    <p class="card-text text-sm">Web-based E-Library plateform Evaluation </p>
+    </div>
+                                        </div>
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 container-fluid stats">
+    <div class="card-body text-center">
+    <img class="avatar avatar-xxl brround" src="Image/Sajjad.jpg" alt="">
+    <h2 class="h3 mb-0 mt-3 font-600">Ass. Pro. Gulabjan Sajjad</h2>
+    <p class="card-text text-sm">Surveys and Questionnaires</p>
+    </div>
+    </div>
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 container-fluid stats">
+    <div class="card-body text-center">
+    <img class="avatar avatar-xxl brround" src="Image/Mangal.jpg" alt="">
+    <h2 class="h3 mb-0 mt-3 font-600">Tea. Ass. Naqeebullah Mangal </h2>
+    <p class="card-text text-sm">Developing a Web-Based Learning Management System </p>
+    </div>
+    </div>
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 container-fluid stats">
+    <div class="card-body text-center">
+    <img class="avatar avatar-xxl brround" src="Image/Hameed.jpg" alt="">
+    <h2 class="h3 mb-0 mt-3 font-600">Ass. Pro. Hameedullah Mohammadi</h2>
+    <p class="card-text text-sm">University Faculty Use of Electronic Resources </p>
+    </div>
+    </div>
+                            </div>
+                            </div>
+                            </div>
+            
+               <!-- End Professors -->
+                <!-- ============================================================== -->
+                <!-- Leave us your Suggetions -->
+                <!-- ============================================================== -->
+
+        <div class="row">
+        <div class="col-xl-6 container-fluid">
+        <div class="card-body ">
+        <div class="card-header">
+        <h2 class="mb-0">Leave us your Suggetions</h2>
+        </div>
+        <div class="card-body ">
+        <div class="form-group">
+        
+        <input type="text" class="form-control" name="example-text-input" placeholder="Enter Your Name">
+        </div>
+               <div class="form-group">
+        
+        <input type="text" class="form-control" name="example-text-input" placeholder="Enter Yuor Email">
+        </div>
+        <div class="form-group">
+        
+        <select name="Jobs" class="form-control custom-select" >
+        <option value="" selected disabled > Chose your Occupation </option>
+        <option value="Teacher" > Teacher </option>
+        <option value="Student" >Student</option>
+        </select>
+        </div>
+                     
+        <div class="form-group ">
+        <textarea class="form-control" name="example-textarea-input" rows="2" placeholder="Write your Suggetions here.."></textarea>
+        </div>
+        <div class="form-group ">
+    <a href="#" class="btn btn-primary  mb-0 form-control"> Send </a>
+    </div>
+        </div> </div> </div> 
+
+
+        <div class="col-xl-6 ">
+            <div class="card-body ">
+<div class="card-header">
+        <h2 class="mb-0">Available Resource Per %</h2>
+        </div>
+            
+        <div class="progress-wrapper pt-2">
+        <div class="progress-info">
+        <div class="progress-label">
+        <span>Books</span>
+        </div>
+        <div class="progress-percentage">
+        <span>70%</span>
+        </div>
+        </div>
+        <div class="progress">
+        <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+        </div>
+        </div>
+        <div class="progress-wrapper pt-2">
+        <div class="progress-info">
+        <div class="progress-label">
+        <span>Monographs</span>
+        </div>
+        <div class="progress-percentage">
+        <span>45%</span>
+        </div>
+        </div>
+        <div class="progress">
+        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
+        </div>
+        </div>
+        <div class="progress-wrapper pt-2">
+        <div class="progress-info">
+        <div class="progress-label">
+        <span>Local Articles</span>
+        </div>
+        <div class="progress-percentage">
+        <span>60%</span>
+        </div>
+        </div>
+        <div class="progress">
+        <div class="progress-bar bg-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+        </div>
+        </div>
+        <div class="progress-wrapper pt-2">
+        <div class="progress-info">
+        <div class="progress-label">
+        <span>Internation Articales</span>
+        </div>
+        <div class="progress-percentage">
+        <span>56%</span>
+        </div>
+        </div>
+        <div class="progress">
+        <div class="progress-bar bg-success" role="progressbar" aria-valuenow="56" aria-valuemin="0" aria-valuemax="100" style="width: 56%;"></div>
+        </div>
+        </div>
+        <div class="progress-wrapper pt-2">
+        <div class="progress-info">
+        <div class="progress-label">
+        <span>Magazines</span>
+        </div>
+        <div class="progress-percentage">
+        <span>30%</span>
+        </div>
+        </div>
+        <div class="progress">
+        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div>
+        </div>
+        </div>
+        <div class="progress-wrapper pt-2">
+        <div class="progress-info">
+        <div class="progress-label">
+        <span>Conferences</span>
+        </div>
+        <div class="progress-percentage">
+        <span>30%</span>
+        </div>
+        </div>
+        <div class="progress">
+        <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div>
+    </div> 
+</div>
+                            </div>
+                            </div>
+                            </div>
+                 <!-- Leave us your Suggetions -->
+                  <!-- ============================================================== -->
+                   <!-- ============================================================== -->
+            <!--  Conferences ..........................-->
+                    <div class="row">
+                    <div class="col">
+                    <div class="card shadow">
+                    <div class="card-header bg-transparent border-0">
+                    <h2 class=" mb-0">List Of Conferences</h2>
+                                        </div>
+                    <div class="">
+                    <div class="grid-margin">
+                    <div class="">
+                    <div class="table-responsive">
+    <table class="table card-table table-vcenter text-nowrap align-items-center">
+    <thead class="thead-light">
+    <tr>
+    <th>Topic</th>
+    <th>Presenter</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Location</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td class="text-sm font-weight-600">Web-based E-library Platform evaluation </td>
+    <td>Tea. Ass. B................</td>
+    <td>2024-4-25</td>
+    <td> 15:30</td>
+    <td> Education faculty PCD</td>         
+    </tr>
+    </tbody>
+    </table>
+            </div>
+                </div>
+                    </div>
+                        </div>
+                            </div>
+                               </div>
+                                  </div>
+                
+</div>
+
+            <!-- ============================================================== -->
+            <!-- Conferences  -->
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+<footer class="footer">
+        <div class="row align-items-center justify-content-xl-between">
+        <div style="width: 100%;">
+        <div class="copyright text-center text-xl-left text-muted">
+        <p class="text-sm font-weight-500 text-center">Copyright 2024 © All Rights Reserved.</p>
+                                        </div>
+            </div>
+            </div>
+            </footer>
+        
+
+    <!-- End footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+   
+    <!-- ============================================================== -->
+    <!-- Back to top -->
+    <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+   <!-- Voice convert. --------->
+     <script src="script.js"></script>
+
+
+
+
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="assets/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- apps -->
+    <script src="dist/js/app.min.js"></script>
+    <!-- Theme settings -->
+    <script src="dist/js/app.init.light-sidebar.js"></script>
+    <script src="dist/js/app-style-switcher.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="assets/extra-libs/sparkline/sparkline.js"></script>
+    <!--Wave Effects -->
+    <script src="dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="dist/js/custom.min.js"></script>
+    <!--This page JavaScript -->
+    <!--Morris JavaScript -->
+    <script src="assets/libs/raphael/raphael.min.js"></script>
+    <script src="assets/libs/morris.js/morris.min.js"></script>
+    <script src="assets/extra-libs/DataTables/datatables.min.js"></script>
+    <script src="dist/js/pages/dashboards/dashboard3.js"></script>
+    
+</body>
+
+</html>

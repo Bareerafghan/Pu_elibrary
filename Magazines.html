@@ -193,15 +193,7 @@
                             </li>
 
 <li class="slide">
-<a class="side-menu__item" data-toggle="slide" href="#"><img style="padding-right: 15px;" class=" icons side-menu__icon" src="Image/paper.gif"><span class="side-menu__label">Articles/Papers</span><i class="angle fa fa-angle-right"></i></a>
-<ul class="slide-menu">
-            <li>
-        <a href="International-articles.html" class="slide-item">International</a>
-                                </li>
-                                <li>
-        <a href="Local-articles.html" class="slide-item">Local</a>
-                                </li>
-                            </ul>
+<a class="side-menu__item" href="articles.html"><img style="padding-right: 15px;" class=" icons side-menu__icon" src="Image/paper.gif"><span class="side-menu__label">Articles/Papers</span><i class="angle fa fa-angle-right"></i></a>
                         </li>
 
                             <li class="slide">
@@ -298,26 +290,56 @@
 									<tr>
 									<th class="wd-15p"> Title </th>
 									<th class="wd-15p"> Publisher </th>
-									<th class="wd-20p"> Type </th>
+									<th class="wd-20p"> Edition </th>
 									<th class="wd-15p"> Year </th>
 									<th class="wd-15p"> Open </th>
 									</tr>
 									</thead>
 										<tbody>
-										<tr>
-										<td> E_Libray For Paktia University </td>
-										<td>Paktia Uiversity </td>
-										<td>Monthly</td>
-										<td>2020</td>
-										<td class="text-center"> <a href="#" class="fas fa-download"> </a> </button></td>
-										</tr>
-										<tr>
-										<td>The Little Lady of the Big House </td>
-										<td> Litrature Faculty </td>
-										<td>Weekly</td>
-										<td>2018</td>
-									   <td class="text-center"> <a href="#" class="fas fa-download"> </a> </button></td>
-										</tr>
+
+                                            <tr>
+                                       <td>Qalam Mojallah</td>
+                                        <td> Paktia University </td>
+                                        <td>First Edition</td>
+                                        <td>2015</td>
+                                        <td class="text-center"> <a href="Resources/B9.pdf" class="fas fa-download"> </a> </button></td>
+                                        </tr>
+                                        <tr>
+                                        <td>Journalist  </td>
+                                        <td>Literature Faculty </td>
+                                        <td>Second Edition </td>
+                                        <td>2017</td>
+                                       <td class="text-center"> <a href="Resources/B2.pdf" class="fas fa-download"> </a> </button></td>
+                                        </tr>
+                                        <tr>
+                                        <td>Khaber_Yal  </td>
+                                        <td>Eduaction Faculty </td>
+                                        <td>Third Edition</td>
+                                        <td>2020</td>
+                                       <td class="text-center"> <a href="Resources/B3.pdf" class="fas fa-download"> </a> </button></td>
+                                        </tr>
+                                         <tr>
+                                       <td>Qalam Mojallah</td>
+                                        <td> Paktia University </td>
+                                        <td>Second Edition</td>
+                                        <td>2016</td>
+                                        <td class="text-center"> <a href="Resources/B1.pdf" class="fas fa-download"> </a> </button></td>
+                                        </tr>
+                                          <tr>
+                                       <td>Qalam Mojallah</td>
+                                        <td> Paktia University </td>
+                                        <td>Third Edition</td>
+                                        <td>2017</td>
+                                        <td class="text-center"> <a href="Resources/B8.pdf" class="fas fa-download"> </a> </button></td>
+                                        </tr>
+                                          <tr>
+                                       <td>Qalam Mojallah</td>
+                                        <td> Paktia University </td>
+                                        <td>Fourth Edition</td>
+                                        <td>2018</td>
+                                        <td class="text-center"> <a href="Resources/B1.pdf" class="fas fa-download"> </a> </button></td>
+                                        </tr>
+                                          
 										</tbody>
 												</table>
 											</div>
@@ -384,7 +406,27 @@
     <script src="assets/libs/morris.js/morris.min.js"></script>
     <script src="assets/extra-libs/DataTables/datatables.min.js"></script>
     <script src="dist/js/pages/dashboards/dashboard3.js"></script>
-    
+        <script>
+        $(function(e) {
+            $('#example').DataTable();
+
+            var table = $('#example1').DataTable();
+            $('button').click( function() {
+                var data = table.$('input, select').serialize();
+                alert(
+                    "The following data would have been submitted to the server: \n\n"+
+                    data.substr( 0, 120 )+'...'
+                );
+                return false;
+            });
+            $('#example2').DataTable( {
+                "scrollY":        "200px",
+                "scrollCollapse": true,
+                "paging":         false
+            });
+        } );
+
+    </script>
 </body>
 
 </html>

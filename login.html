@@ -45,7 +45,21 @@
 	<!-- Sidemenu Css -->
 	<link href="assets/plugins/toggle-sidebar/css/sidemenu.css" rel="stylesheet">
 
+<style type="text/css">
+    #email_error , #pass_error
+    {
+        margin-top: 1px;
+        margin-bottom: 3px;
+        width:90%;
+        font-size: 14px;
+        color: #C62828;
+        text-align: center;
+        padding: 2px 3px;
+        border-radius: 3px;
+        display: none;
 
+    }
+</style>
 </head>
 
 <body>
@@ -111,43 +125,11 @@
                         <!-- ============================================================== -->
                         <!--  Search -->
                         <!-- ============================================================== -->
-                       <li class="nav-item dropdown">
-<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
- <input style="height:30px;" placeholder="Search" id="textbox" type="text">
-     </a>
 
- <div class="dropdown-menu animated bounceInDown" aria-labelledby="navbarDropdown2">
-    
-    <a href="#" class="dropdown-item "> <strong>incorporating ways </strong> </br> 1.Voice Searching: If you dont typing you can Search by voice, your voice will be convert to text! <br>
-2: writing Searching: if you can typeing you can search by typeing words </a>
-                                            <div class="dropdown-divider"></div>
-<a href="#" class="dropdown-item "> <strong>Guide </strong> </br> 1.First you should wirte the title of eduacation resources in the search text-box! <br>
-2: second you should choice the type of educational resources beside of search text-box!
- <br>
-3:After the selection type of educational resource, your searching will be going!</a>
-                                            <div class="dropdown-divider"></div>
-<a href="#" class="dropdown-item "><strong>Examples </strong> </br> 1. finding a book which has title "Afghanistan Telecommunication". <br>
-2: finding a Monongraph which has title "Web Hosting".</a>
-                                          </div>
-                            
-                        </li>
 
                  <!-- ============================================================== -->
                         <!-- Search type -->
-                      <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="d-none d-md-block"> Search type <i class="fa fa-angle-down"></i></span>
-    <span class="d-block d-md-none"><i class="fa fa-search"></i></span>   
-                            </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-    <option class="dropdown-item" value="" selected disabled hidden > Search type </option>
-        <option class="dropdown-item" value="Books" > Books </option>
-        <option class="dropdown-item" value="Monographs" >Monographs</option>
-        <option class="dropdown-item" value="Articles" >Articles</option>
-        <option class="dropdown-item" value="Magazines" >Magazines</option>
-        <option class="dropdown-item" value="Conferences" >Conferences</option>
-       </div>
-                        </li> </ul>
+                       </ul>
              <!-- ============================================================== -->
                     <!-- Right side toggle and nav items -->
              <!-- ============================================================== -->
@@ -256,70 +238,39 @@
         <!-- ============================================================== -->
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
-        <div class="page-wrapper">
-            <!-- ============================================================== -->
-            <!-- Bread crumb and right sidebar toggle -->
-            <!-- ============================================================== -->
-            <div class="page-breadcrumb">
-                <div class="row">
-                    <div class="col-5 align-self-center">
-                        <h4 class="page-title">About Me</h4>
-                        <div class="d-flex align-items-center">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">About Me</li>
-                                </ol>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="col-7 align-self-center">
-                        <div class="d-flex no-block justify-content-end align-items-center">
-                            <div class="m-r-10">
-                                <div class="lastmonth"></div>
-                            </div>
-                            <div class=""><small>LAST MONTH Viewes</small>
-                                <h4 class="text-info m-b-0 font-medium">584</h4></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
+      
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100 p-5">
 
-				<form class="login100-form validate-form">
+				<form  name="form" method="POST" action="Control/index.html" class="login100-form validate-form" onsubmit="return validted()">
 					<span class="login100-form-title">
 						Login
 					</span>
 
 					<div class="wrap-input100 validate-input " data-validate = "Valid email is required: ex@abc.xyz">
-					<input class="input100"  type="text" name="email" placeholder="Email">
-						<span class="focus-input100"></span>
+					<input class="input100"  autocomplete="off" type="text" name="email" placeholder="Email" required>
+                    <span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 						</span>
 					</div>
-
+<div id="email_error"> Email is incorrect! </div>
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="pass" placeholder="Password">
+						<input class="input100" type="password" name="password" placeholder="Password" required><span> </span>
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
 					</div>
+<div id="pass_error"> Password is incorrect! </div>
 
 					<div class="container-login100-form-btn">
-						<a href="Control/index.html" class="login100-form-btn btn-primary">
+						<button type="submit"  class="login100-form-btn btn-primary">
 							Login
-						</a>
+						</button>
 					</div>
-
-					
-
-					
+			
 				</form>
 			</div>
 		</div>
@@ -335,10 +286,60 @@
     <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
     <!-- All Jquery -->
     <!-- ============================================================== -->
-   <!-- Voice convert. --------->
-     <script src="script.js"></script>
+   <!-- Voice convert. <script src="script.js"></script> --------->
+
+<script type="text/javascript">
+    var email= document.forms['form']['email'];
+    var password= document.forms['form']['password'];
+    var regx= /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/
+
+    var email_error = document.getElementById('email_error');
+    var pass_error= document.getElementById('pass_error');
+
+     email.addEventListener('textInput', email_Verify);
+     password.addEventListener('textInput', pass_Verify);
 
 
+ function validted() {
+if (email.value.length<14 ){
+    email.style.border ="1px solid red";
+    email_error.style.display = "block";
+    email.focus();
+    return false;
+ }
+ else if (password.value.length<6){
+    password.style.border ="1px solid red";
+    pass_error.style.display = "block";
+    password.focus();
+    return false;
+ }
+ else if (email.value == 'life@gmill.com' && password.value=="life1234"){
+  return true;
+} else 
+ password.style.border ="1px solid red";
+    pass_error.style.display = "block";
+    email.style.border ="1px solid red";
+    email_error.style.display = "block";
+return false;
+}
+
+function email_Verify(){
+if(email.value.length >= 13){
+email.style.border = "1px solid silver";
+email_error.style.display= "none";
+return false;
+}
+}
+function pass_Verify(){
+if(password.value.length >= 5){
+password.style.border = "1px solid silver";
+pass_error.style.display= "none";
+return false;
+}
+}
+
+
+</script>
 
 
     <script src="assets/libs/jquery/dist/jquery.min.js"></script>
